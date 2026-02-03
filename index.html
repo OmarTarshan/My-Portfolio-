@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Omar Tarshan Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050505;
+      --neon-blue: #00f2ff;
+      --neon-red: #ff0055;
+    }
+    body {
+      background-color: var(--bg);
+      color: #ffffff;
+      font-family: 'Cairo', sans-serif;
+      scroll-behavior: smooth;
+    }
+    /* تأثير النيون للزراير */
+    .btn-neon-blue {
+      background: transparent;
+      border: 2px solid var(--neon-blue);
+      color: var(--neon-blue);
+      box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+    .btn-neon-blue:hover {
+      background: var(--neon-blue);
+      color: #000;
+      box-shadow: 0 0 30px var(--neon-blue);
+    }
+    .btn-neon-red {
+      background: transparent;
+      border: 2px solid var(--neon-red);
+      color: var(--neon-red);
+      box-shadow: 0 0 10px rgba(255, 0, 85, 0.2);
+      transition: all 0.3s ease;
+    }
+    .btn-neon-red:hover {
+      background: var(--neon-red);
+      color: #000;
+      box-shadow: 0 0 30px var(--neon-red);
+    }
+    /* أيقونات التواصل الاجتماعي الدائرية */
+    .social-icon {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    .social-icon:hover {
+      transform: translateY(-5px);
+      border-color: var(--neon-blue);
+      color: var(--neon-blue);
+      box-shadow: 0 0 15px var(--neon-blue);
+    }
+
+    .neon-border-blue { border: 2px solid var(--neon-blue); box-shadow: 0 0 15px rgba(0, 242, 255, 0.3); }
+    
+    .work-card { transition: transform 0.4s ease; border: 1px solid rgba(255,255,255,0.1); }
+    .work-card:hover { transform: scale(1.03); border-color: var(--neon-blue); }
+
+    /* تأثيرات الأنيميشن لقسم الخدمات */
+    .service-card { transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.05); }
+    .service-card:hover { 
+        transform: translateY(-10px); 
+        border-color: var(--neon-blue); 
+        background: rgba(255,255,255,0.02); 
+    }
+    .service-card:hover i { transform: scale(1.2); filter: drop-shadow(0 0 10px currentColor); }
+    i { transition: all 0.3s ease; }
+    
+    img { filter: none !important; grayscale: 0 !important; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <header class="fixed top-0 inset-x-0 z-50 p-4">
+    <div class="mx-auto max-w-7xl">
+      <div class="bg-black/80 backdrop-blur-lg border border-white/10 rounded-2xl flex items-center justify-between px-6 py-4">
+        <div class="text-2xl font-black tracking-tighter">
+          <span class="text-[#00f2ff]">O m a r </span><span class="text-[#ff0055]"> T a r s h a n</span>
+        </div>
+        <nav class="hidden md:flex gap-8 text-sm font-bold">
+          <a href="#works" class="hover:text-[#00f2ff] transition">الأعمال</a>
+          <a href="#services" class="hover:text-[#ff0055] transition">الخدمات</a>
+          <a href="#about" class="hover:text-[#00f2ff] transition">عني</a>
+          <a href="#contact" class="hover:text-[#ff0055] transition">تواصل</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <a href="mailto:omarturshan9@gmail.com" class="text-xl hover:text-[#00f2ff] transition hidden sm:block"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#contact" class="btn-neon-blue px-6 py-2 rounded-full font-bold text-sm">ابدأ الآن</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="relative pt-48 pb-20 px-4 overflow-hidden">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-[#00f2ff]/10 blur-[120px]"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#ff0055]/10 blur-[120px]"></div>
+
+    <div class="mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div>
+        <h1 class="text-6xl md:text-8xl font-black leading-tight">
+          نصنع <span class="text-[#00f2ff]">المستحيل</span> <br>بلمسة <span class="text-[#ff0055]">إبداع</span>
+        </h1>
+        <p class="text-gray-400 mt-8 text-xl leading-relaxed">
+          نحن لا نصمم فقط، نحن نعيد صياغة الواقع بدمج المونتاج الاحترافي وقوة الذكاء الاصطناعي لخلق تجربة بصرية لا تُنسى.
+        </p>
+        <div class="flex gap-4 mt-10">
+          <a href="#works" class="btn-neon-blue px-10 py-4 rounded-xl font-bold">معرض الأعمال</a>
+          <a href="#contact" class="btn-neon-red px-10 py-4 rounded-xl font-bold">تواصل فوري</a>
+        </div>
+      </div>
+      
+      <div class="relative">
+        <div class="rounded-3xl overflow-hidden neon-border-blue aspect-video">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 bg-black/40 border-y border-white/5">
+    <div class="mx-auto max-w-7xl px-4 grid md:grid-cols-2 gap-16 items-center">
+      <div class="order-2 md:order-1">
+        <h2 class="text-4xl font-black mb-6">رؤية بصرية <span class="text-[#00f2ff]">مبتكرة</span></h2>
+        <p class="text-gray-300 text-lg leading-relaxed">
+            محرر فيديو وصانع محتوى بصري، أجمع بين مهارات المونتاج وقوة الذكاء الاصطناعي لتقديم أعمال فنية تتجاوز الحدود التقليدية.
+            <br><br>
+            أؤمن بأن كل مشروع هو تحدٍ جديد لتقديم رؤية بصرية فريدة؛ سواء كان ذلك من خلال بناء هويات بصرية متكاملة، أو تحرير فيديوهات سينمائية تخطف الأنظار.
+        </p>
+        <div class="mt-8 space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="w-2 h-2 rounded-full bg-[#00f2ff]"></div>
+            <span>دقة 4K في كل المشاريع</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-2 h-2 rounded-full bg-[#ff0055]"></div>
+            <span>حلول ذكاء اصطناعي مبتكرة</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="order-1 md:order-2 flex justify-center">
+        <div class="w-80 h-80 relative">
+          <div class="absolute inset-0 border-4 border-[#00f2ff] rounded-3xl rotate-3"></div>
+          <div class="absolute inset-0 border-4 border-[#ff0055] rounded-3xl -rotate-3"></div>
+          <img src="https://i.ibb.co/zWWz73VY/Whats-App-Image-2026-02-03-at-2-11-02-AM.jpg" alt="المصمم" class="relative z-10 rounded-2xl object-cover w-full h-full shadow-2xl">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-24 px-4 bg-black">
+    <div class="mx-auto max-w-7xl">
+        <h2 class="text-4xl font-black mb-16 text-center">الخدمات <span class="text-[#ff0055]">الإبداعية</span></h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="service-card p-10 bg-[#0a0a0a] rounded-3xl text-right">
+                <div class="text-[#00f2ff] text-5xl mb-6"><i class="fa-solid fa-film"></i></div>
+                <h3 class="text-2xl font-bold mb-4">المونتاج السينمائي</h3>
+                <p class="text-gray-400">تحرير فيديوهات احترافية تليق بمنصات التواصل الاجتماعي واليوتيوب.</p>
+            </div>
+            <div class="service-card p-10 bg-[#0a0a0a] rounded-3xl text-right">
+                <div class="text-[#ff0055] text-5xl mb-6"><i class="fa-solid fa-microchip"></i></div>
+                <h3 class="text-2xl font-bold mb-4">حلول الذكاء الاصطناعي</h3>
+                <p class="text-gray-400">توليد العناصر البصرية المتقدمة وتطوير المحتوى باستخدام أحدث التقنيات.</p>
+            </div>
+            <div class="service-card p-10 bg-[#0a0a0a] rounded-3xl text-right">
+                <div class="text-[#00f2ff] text-5xl mb-6"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <h3 class="text-2xl font-bold mb-4">الجرافيك والألوان</h3>
+                <p class="text-gray-400">تصميم بوسترات جذابة وضبط ألوان سينمائي لزيادة التفاعل.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="works" class="py-24 px-4">
+    <div class="mx-auto max-w-7xl">
+      <h2 class="text-4xl font-black mb-16 text-center">مشاريع <span class="text-[#00f2ff]">مختارة</span></h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        
+        <div class="work-card bg-[#111] rounded-2xl overflow-hidden">
+          <img src="https://via.placeholder.com/600x450/000000/00f2ff?text=Project+1" class="w-full aspect-video object-cover">
+          <div class="p-6">
+            <span class="text-[#00f2ff] text-xs font-bold uppercase tracking-widest">Video Editing</span>
+            <h3 class="font-bold text-xl mt-2">اسم المشروع الأول</h3>
+          </div>
+        </div>
+
+        <div class="work-card bg-[#111] rounded-2xl overflow-hidden">
+          <img src="https://via.placeholder.com/600x450/000000/ff0055?text=Project+2" class="w-full aspect-video object-cover">
+          <div class="p-6">
+            <span class="text-[#ff0055] text-xs font-bold uppercase tracking-widest">Graphic Design</span>
+            <h3 class="font-bold text-xl mt-2">اسم المشروع الثاني</h3>
+          </div>
+        </div>
+
+        <div class="work-card bg-[#111] rounded-2xl overflow-hidden">
+          <img src="https://via.placeholder.com/600x450/000000/00f2ff?text=Project+3" class="w-full aspect-video object-cover">
+          <div class="p-6">
+            <span class="text-[#00f2ff] text-xs font-bold uppercase tracking-widest">Advertising</span>
+            <h3 class="font-bold text-xl mt-2">اسم المشروع الثالث</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="py-20 border-t border-white/10 bg-black">
+    <div class="mx-auto max-w-7xl px-4 text-center">
+      <h2 class="text-5xl font-black mb-10">لنبدأ <span class="text-[#ff0055]">الرحلة</span> الآن</h2>
+      
+      <div class="flex flex-col items-center gap-8">
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="https://wa.me/01097463663" class="btn-neon-blue px-8 py-3 rounded-xl font-bold flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="mailto:omarturshan9@gmail.com" class="btn-neon-red px-8 py-3 rounded-xl font-bold flex items-center gap-2">
+            <i class="fa-solid fa-envelope"></i> Email Me
+          </a>
+        </div>
+
+        <div class="flex justify-center gap-6 mt-4">
+            <a href="https://linkedin.com/in/omartarshan" class="social-icon text-2xl" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/omar.tarshan.2025" class="social-icon text-2xl" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com/omar_tarshan" class="social-icon text-2xl" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <p class="mt-16 text-gray-600 text-sm">
+        جميع الحقوق محفوظة لـ Eng/ Omar Tarshan &copy; 2026
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
