@@ -66,15 +66,13 @@
         border-color: var(--neon-blue); 
         background: rgba(255,255,255,0.02); 
     }
-    
-    /* ستايل اللوجو */
+  
     .site-logo {
         height: 50px; 
         width: auto;
         object-fit: contain;
     }
 
-    /* ستايل سلايدر قبل وبعد التفاعلي */
     .comparison-slider {
         position: relative;
         width: 100%;
@@ -199,7 +197,7 @@
         <div class="w-80 h-80 relative">
           <div class="absolute inset-0 border-4 border-[#00f2ff] rounded-3xl rotate-3"></div>
           <div class="absolute inset-0 border-4 border-[#ff0055] rounded-3xl -rotate-3"></div>
-          <img src="images/portfolio-image.png" alt="المصمم" class="relative z-10 rounded-2xl object-cover w-full h-full shadow-2xl">
+          <img src="images/portfolio-image.webp" alt="المصمم" class="relative z-10 rounded-2xl object-cover w-full h-full shadow-2xl">
         </div>
       </div>
     </div>
@@ -340,7 +338,6 @@
         const rect = slider.getBoundingClientRect();
         let position = ((clientX - rect.left) / rect.width) * 100;
         
-        // حماية الحدود
         if (position < 0) position = 0;
         if (position > 100) position = 100;
 
@@ -356,3 +353,4 @@
 
 </body>
 </html>
+
